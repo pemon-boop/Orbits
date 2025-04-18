@@ -1,0 +1,11 @@
+2025-04-16 23:21:26 ERROR: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 444, in __init__
+    raise ValueError(f"A 2D list is expected to the initial_population parameter but a ({numpy.array(initial_population).ndim}-D) list found.")
+ValueError: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+2025-04-16 23:41:17 ERROR: The number of parents to select for mating (20) cannot be greater than the number of solutions in the population (4) (i.e., num_parents_mating must always be <= sol_per_pop).
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 569, in __init__
+    raise ValueError(f"The number of parents to select for mating ({num_parents_mating}) cannot be greater than the number of solutions in the population ({self.sol_per_pop}) (i.e., num_parents_mating must always be <= sol_per_pop).\n")
+ValueError: The number of parents to select for mating (20) cannot be greater than the number of solutions in the population (4) (i.e., num_parents_mating must always be <= sol_per_pop).
+
