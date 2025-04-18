@@ -46,11 +46,6 @@ def evaluationFunction(x, muS, muM, rM, earth, mars):
     # minimize delta-v
     J1 = abs(np.linalg.norm(vEarthDept - vMarsArv))
     Idx = np.argmin(J1)
-    
-    # Calculate the Delta-v provided by the flyby
-    if Idx == 0:
-        flybyDelv = abs(np.linalg.norm(vEarthDept - vMarsArv))
-        deltaVMisMatch = J1
 
     #***********************************************************************************************************************************************************
     # Display Results
