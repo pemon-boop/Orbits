@@ -1,11 +1,465 @@
-2025-04-16 23:21:26 ERROR: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+2025-04-16 23:05:34 ERROR: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pygad\pygad.py", line 444, in __init__
+    raise ValueError(f"A 2D list is expected to the initial_population parameter but a ({numpy.array(initial_population).ndim}-D) list found.")
+ValueError: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+2025-04-16 23:36:51 ERROR: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pygad\pygad.py", line 444, in __init__
+    raise ValueError(f"A 2D list is expected to the initial_population parameter but a ({numpy.array(initial_population).ndim}-D) list found.")
+ValueError: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+2025-04-16 23:42:06 ERROR: The number of parents to select for mating (10) cannot be greater than the number of solutions in the population (2) (i.e., num_parents_mating must always be <= sol_per_pop).
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pygad\pygad.py", line 569, in __init__
+    raise ValueError(f"The number of parents to select for mating ({num_parents_mating}) cannot be greater than the number of solutions in the population ({self.sol_per_pop}) (i.e., num_parents_mating must always be <= sol_per_pop).\n")
+ValueError: The number of parents to select for mating (10) cannot be greater than the number of solutions in the population (2) (i.e., num_parents_mating must always be <= sol_per_pop).
+
+2025-04-16 23:51:48 ERROR: The number of parents to select for mating (10) cannot be greater than the number of solutions in the population (2) (i.e., num_parents_mating must always be <= sol_per_pop).
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pygad\pygad.py", line 569, in __init__
+    raise ValueError(f"The number of parents to select for mating ({num_parents_mating}) cannot be greater than the number of solutions in the population ({self.sol_per_pop}) (i.e., num_parents_mating must always be <= sol_per_pop).\n")
+ValueError: The number of parents to select for mating (10) cannot be greater than the number of solutions in the population (2) (i.e., num_parents_mating must always be <= sol_per_pop).
+
+2025-04-17 14:05:19 ERROR: The number of parents to select for mating (10) cannot be greater than the number of solutions in the population (2) (i.e., num_parents_mating must always be <= sol_per_pop).
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pygad\pygad.py", line 569, in __init__
+    raise ValueError(f"The number of parents to select for mating ({num_parents_mating}) cannot be greater than the number of solutions in the population ({self.sol_per_pop}) (i.e., num_parents_mating must always be <= sol_per_pop).\n")
+ValueError: The number of parents to select for mating (10) cannot be greater than the number of solutions in the population (2) (i.e., num_parents_mating must always be <= sol_per_pop).
+
+2025-04-17 14:05:52 ERROR: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pygad\pygad.py", line 444, in __init__
+    raise ValueError(f"A 2D list is expected to the initial_population parameter but a ({numpy.array(initial_population).ndim}-D) list found.")
+ValueError: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+2025-04-17 14:59:07 ERROR: A 2D list is expected to the initial_population parameter but a (1-D) list found.
 Traceback (most recent call last):
   File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 444, in __init__
     raise ValueError(f"A 2D list is expected to the initial_population parameter but a ({numpy.array(initial_population).ndim}-D) list found.")
 ValueError: A 2D list is expected to the initial_population parameter but a (1-D) list found.
-2025-04-16 23:41:17 ERROR: The number of parents to select for mating (20) cannot be greater than the number of solutions in the population (4) (i.e., num_parents_mating must always be <= sol_per_pop).
+2025-04-17 15:04:26 ERROR: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 444, in __init__
+    raise ValueError(f"A 2D list is expected to the initial_population parameter but a ({numpy.array(initial_population).ndim}-D) list found.")
+ValueError: A 2D list is expected to the initial_population parameter but a (1-D) list found.
+2025-04-17 15:05:09 ERROR: The number of parents to select for mating (50) cannot be greater than the number of solutions in the population (1) (i.e., num_parents_mating must always be <= sol_per_pop).
 Traceback (most recent call last):
   File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 569, in __init__
     raise ValueError(f"The number of parents to select for mating ({num_parents_mating}) cannot be greater than the number of solutions in the population ({self.sol_per_pop}) (i.e., num_parents_mating must always be <= sol_per_pop).\n")
-ValueError: The number of parents to select for mating (20) cannot be greater than the number of solutions in the population (4) (i.e., num_parents_mating must always be <= sol_per_pop).
+ValueError: The number of parents to select for mating (50) cannot be greater than the number of solutions in the population (1) (i.e., num_parents_mating must always be <= sol_per_pop).
 
+2025-04-17 15:06:37 ERROR: The number of parents to select for mating (50) cannot be greater than the number of solutions in the population (1) (i.e., num_parents_mating must always be <= sol_per_pop).
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 569, in __init__
+    raise ValueError(f"The number of parents to select for mating ({num_parents_mating}) cannot be greater than the number of solutions in the population ({self.sol_per_pop}) (i.e., num_parents_mating must always be <= sol_per_pop).\n")
+ValueError: The number of parents to select for mating (50) cannot be greater than the number of solutions in the population (1) (i.e., num_parents_mating must always be <= sol_per_pop).
+
+2025-04-17 15:10:42 ERROR: The number of parents to select for mating (50) cannot be greater than the number of solutions in the population (40) (i.e., num_parents_mating must always be <= sol_per_pop).
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 569, in __init__
+    raise ValueError(f"The number of parents to select for mating ({num_parents_mating}) cannot be greater than the number of solutions in the population ({self.sol_per_pop}) (i.e., num_parents_mating must always be <= sol_per_pop).\n")
+ValueError: The number of parents to select for mating (50) cannot be greater than the number of solutions in the population (40) (i.e., num_parents_mating must always be <= sol_per_pop).
+
+2025-04-17 15:11:29 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:11:29 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:12:08 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:12:08 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:12:47 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:12:47 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:14:49 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:14:49 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:15:34 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:15:34 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:16:29 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:16:29 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:17:06 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:17:06 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:17:28 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:17:28 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:18:22 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:18:22 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:19:01 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:19:01 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:19:25 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:19:25 ERROR: 'numpy.float64' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 48, in costFunction
+    J = min(J1)
+TypeError: 'numpy.float64' object is not iterable
+2025-04-17 15:31:15 ERROR: Undefined mutation type. 
+The assigned string value to the 'mutation_type' parameter (none) does not refer to one of the supported mutation types which are: 
+-random (for random mutation)
+-swap (for swap mutation)
+-inversion (for inversion mutation)
+-scramble (for scramble mutation)
+-adaptive (for adaptive mutation).
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 663, in __init__
+    raise TypeError(f"Undefined mutation type. \nThe assigned string value to the 'mutation_type' parameter ({mutation_type}) does not refer to one of the supported mutation types which are: \n-random (for random mutation)\n-swap (for swap mutation)\n-inversion (for inversion mutation)\n-scramble (for scramble mutation)\n-adaptive (for adaptive mutation).\n")
+TypeError: Undefined mutation type. 
+The assigned string value to the 'mutation_type' parameter (none) does not refer to one of the supported mutation types which are: 
+-random (for random mutation)
+-swap (for swap mutation)
+-inversion (for inversion mutation)
+-scramble (for scramble mutation)
+-adaptive (for adaptive mutation).
+
+2025-04-17 15:37:58 ERROR: Invalid nrev argument. Looking for type 'int'.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 38, in costFunction
+    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, 1)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 177, in LambertIzzo
+    vel1, vel2, exitflag = LambertLancasterBlanchard(mu, r1vec*r1, r2vec*r1, longway*tf*T, leftbranch*m, solverTol)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 269, in LambertLancasterBlanchard
+    raise TypeError(f"Invalid nrev argument. Looking for type 'int'.")
+TypeError: Invalid nrev argument. Looking for type 'int'.
+2025-04-17 15:37:58 ERROR: Invalid nrev argument. Looking for type 'int'.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 38, in costFunction
+    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, 1)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 177, in LambertIzzo
+    vel1, vel2, exitflag = LambertLancasterBlanchard(mu, r1vec*r1, r2vec*r1, longway*tf*T, leftbranch*m, solverTol)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 269, in LambertLancasterBlanchard
+    raise TypeError(f"Invalid nrev argument. Looking for type 'int'.")
+TypeError: Invalid nrev argument. Looking for type 'int'.
+2025-04-17 15:38:59 ERROR: Invalid nrev argument. Looking for type 'int'.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 38, in costFunction
+    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, int(1))
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 177, in LambertIzzo
+    vel1, vel2, exitflag = LambertLancasterBlanchard(mu, r1vec*r1, r2vec*r1, longway*tf*T, leftbranch*m, solverTol)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 269, in LambertLancasterBlanchard
+    raise TypeError(f"Invalid nrev argument. Looking for type 'int'.")
+TypeError: Invalid nrev argument. Looking for type 'int'.
+2025-04-17 15:38:59 ERROR: Invalid nrev argument. Looking for type 'int'.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 38, in costFunction
+    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, int(1))
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 177, in LambertIzzo
+    vel1, vel2, exitflag = LambertLancasterBlanchard(mu, r1vec*r1, r2vec*r1, longway*tf*T, leftbranch*m, solverTol)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 269, in LambertLancasterBlanchard
+    raise TypeError(f"Invalid nrev argument. Looking for type 'int'.")
+TypeError: Invalid nrev argument. Looking for type 'int'.
+2025-04-17 15:40:13 ERROR: Invalid nrev argument. Looking for type 'int'.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 38, in costFunction
+    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, 1)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 177, in LambertIzzo
+    vel1, vel2, exitflag = LambertLancasterBlanchard(mu, r1vec*r1, r2vec*r1, longway*tf*T, leftbranch*m, solverTol)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 269, in LambertLancasterBlanchard
+    raise TypeError(f"Invalid nrev argument. Looking for type 'int'.")
+TypeError: Invalid nrev argument. Looking for type 'int'.
+2025-04-17 15:40:13 ERROR: Invalid nrev argument. Looking for type 'int'.
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1903, in run
+    self.last_generation_fitness = self.cal_pop_fitness()
+                                   ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1860, in cal_pop_fitness
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1697, in cal_pop_fitness
+    fitness = self.fitness_func(self, sol, sol_idx)
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\configGA.py", line 90, in <lambda>
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
+                                                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\Objective.py", line 38, in costFunction
+    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, 1)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 177, in LambertIzzo
+    vel1, vel2, exitflag = LambertLancasterBlanchard(mu, r1vec*r1, r2vec*r1, longway*tf*T, leftbranch*m, solverTol)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\OneDrive - Cal Poly\Orbits\MGA\lambert.py", line 269, in LambertLancasterBlanchard
+    raise TypeError(f"Invalid nrev argument. Looking for type 'int'.")
+TypeError: Invalid nrev argument. Looking for type 'int'.

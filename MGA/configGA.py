@@ -5,7 +5,7 @@ import pygad
 import time
 from Objective import costFunction
 
-def runGA(lb, ub, x0, muS, muV, rV, earth, venus, mars):
+def runGA(lb, ub, muS, muM, rM, earth, mars):
 
     """
     Runs the Genetic Algorithm.
@@ -13,7 +13,7 @@ def runGA(lb, ub, x0, muS, muV, rV, earth, venus, mars):
     Inputs:
         lb  - Lower bounds (list or numpy array) for design variables.
         ub  - Upper bounds (list or numpy array) for design variables.
-        muS, muV, rV - Additional parameters passed to the cost function.
+        muS, muM, rM - Additional parameters passed to the cost function.
         x0  - Initial population matrix (each row is an individual).
     
     Outputs:
@@ -36,12 +36,14 @@ def runGA(lb, ub, x0, muS, muV, rV, earth, venus, mars):
     #***********************************************************************************************************************************************************
     # Initial Guess
     #***********************************************************************************************************************************************************
-    
-    if x0 is None:
-        initial_population = np.random.uniform(lb, ub, size=(pop_size, nvars))
-    else:
-        initial_population = x0
-    
+
+    initial_population = np.random.uniform(lb, ub, size=(pop_size, nvars))
+
+    # if x0 is None:
+    #     initial_population = np.random.uniform(lb, ub, size=(pop_size, nvars))
+    # else:
+    #     initial_population = x0
+
     #***********************************************************************************************************************************************************
     # GA options
     #***********************************************************************************************************************************************************
@@ -55,8 +57,8 @@ def runGA(lb, ub, x0, muS, muV, rV, earth, venus, mars):
     matingPoolSize = int(0.5 * num_gen*nvars)
     parentSelectionType = "rws"             # Roulette Wheel Selection
     crossoverType = "single_point"
-    mutationType = "random"
-    mutationPercentage = 15 
+    mutationType = None
+    mutationPercentage = 15
 
     #***********************************************************************************************************************************************************
     # Log GA results
@@ -85,7 +87,7 @@ def runGA(lb, ub, x0, muS, muV, rV, earth, venus, mars):
     #***********************************************************************************************************************************************************
     
     # Define the parameter dictionary for passing to the fitness function.
-    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muV, rV, earth, venus, mars)
+    fitness_function = lambda ga_instance, sol, sol_idx: costFunction(ga_instance, sol, sol_idx, muS, muM, rM, earth, mars)
     
     # Record start time
     start_time = time.time()
