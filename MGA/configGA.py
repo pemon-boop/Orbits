@@ -30,8 +30,8 @@ def runGA(lb, ub, muS, muM, rM, earth, mars):
     #***********************************************************************************************************************************************************
     
     nvars = len(lb)
-    num_gen  = 100
-    pop_size = 50 * nvars
+    num_gen  = 1000
+    pop_size = 500 * nvars
 
     #***********************************************************************************************************************************************************
     # Initial Guess
@@ -58,7 +58,7 @@ def runGA(lb, ub, muS, muM, rM, earth, mars):
     parentSelectionType = "rws"             # Roulette Wheel Selection
     crossoverType = "single_point"
     mutationType = None
-    mutationPercentage = 15
+    mutationPercentage = "default"
 
     #***********************************************************************************************************************************************************
     # Log GA results

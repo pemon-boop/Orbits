@@ -42,6 +42,5 @@ X_GA, fval_GA, exitflag_GA, output_GA, population, score = runGA(lb, ub, muS, mu
 
 # Extract Solution 
 # X_GA = initialGuess
-# evaluationFunction(X_GA, muS, muM, rM, earth, mars)
 
 evaluationFunction(X_GA, muS, muM, rM, earth, mars)

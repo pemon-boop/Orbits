@@ -1,6 +1,6 @@
 import numpy as np 
 
-def LambertIzzo(mu : float, pos1 : np.ndarray, pos2 : np.array, tof : float , nrev : int = 0, solverTol : float = 1e-14):
+def LambertIzzo(mu : float, pos1 : np.ndarray, pos2 : np.array, tof : float , nrev : int, solverTol : float = 1e-14):
     """
     Description:
         This function estimates and determines the initial orbit using Lambert's method. 
@@ -239,7 +239,7 @@ def LambertIzzo(mu : float, pos1 : np.ndarray, pos2 : np.array, tof : float , nr
 
     return V1, V2, exitflag
 
-def LambertLancasterBlanchard(mu : float, pos1 : np.ndarray, pos2 : np.ndarray, tf : float, nrev : int = 0, solverTol : float = 1e-14):
+def LambertLancasterBlanchard(mu : float, pos1 : np.ndarray, pos2 : np.ndarray, tf : float, nrev : int, solverTol : float = 1e-14):
 
     """
     Description:

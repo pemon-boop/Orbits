@@ -35,11 +35,11 @@ def costFunction(gaInstance, x, x_idx, muS, muM, rM, earth, mars):
     marsPosition, marsVelocity = mars.compute_and_differentiate(arvDate)
     marsVelocity = marsVelocity/86400
 
-    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, 0)
+    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, int("1"))
 
     # If Lambert didnt converge return a high np.cost
     if (exitflag == -1) or (exitflag == -2):
-        J = 1.0 / (2000 + 1e-8)
+        J = 200000
         return J
 
     # ***********************************************************************************************************************************************************

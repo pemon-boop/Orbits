@@ -85,7 +85,7 @@ def evaluationFunction(x, muS, muM, rM, earth, mars):
     ax.plot(statesMars.y[0], statesMars.y[1], statesMars.y[2], 'r-', label='Mars Orbit')
     # Points 
     ax.scatter(earthPosition[0], earthPosition[1], earthPosition[2], color='b', marker='o', label='Departure')
-    ax.scatter(marsPosition[0], marsPosition[1], marsPosition[2], color='r', marker='o', label='Fly-By')
+    # ax.scatter(marsPosition[0], marsPosition[1], marsPosition[2], color='r', marker='o', label='Fly-By')
     # Transfer Trajectory
     ax.plot(statesLeg1.y[0], statesLeg1.y[1], statesLeg1.y[2], 'b-', label='Pre-FlyBy Trajectory')
     # ax.plot(statesLeg2.y[0], statesLeg2.y[1], statesLeg2.y[2], 'y-', label='Post-FlyBy Trajectory')
