@@ -41,7 +41,7 @@ def evaluationFunction(x, muS, muM, rM, earth, mars):
     marsPosition, marsVelocity = mars.compute_and_differentiate(arvDate)
     earthVelocity = earthVelocity/86400       # [km/s]
     marsVelocity = marsVelocity/86400  # [km/s]
-    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, 0)
+    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, int(0))
 
     # minimize delta-v
     J1 = abs(np.linalg.norm(vEarthDept - vMarsArv))

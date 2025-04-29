@@ -53,10 +53,10 @@ def runGA(lb, ub, muS, muM, rM, earth, mars):
     #***********************************************************************************************************************************************************
     # Fitness and selection options
     #***********************************************************************************************************************************************************
-    eliteCount = 5
+    eliteCount = 10
     matingPoolSize = int(0.5 * num_gen*nvars)
-    parentSelectionType = "rws"             # Roulette Wheel Selection
-    crossoverType = "single_point"
+    parentSelectionType = "tournament"       
+    crossoverType = "uniform"
     mutationType = None
     mutationPercentage = "default"
 
@@ -125,7 +125,7 @@ def runGA(lb, ub, muS, muM, rM, earth, mars):
     else:
         exit_flag = 0  # reached maximum generations
     
-    # Prepare output information similar to MATLAB's output structure.
+    # Prepare output information similar to MATLAB's output structure.4
     output = {
         'generations_completed': ga_instance.generations_completed,
         'time_elapsed': elapsed_time,
