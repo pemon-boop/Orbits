@@ -30,25 +30,65 @@ def costFunction(gaInstance, x, x_idx, muS, muM, rM, earth, mars):
     # ***********************************************************************************************************************************************************
     # Leg - 1
     # ***********************************************************************************************************************************************************
-    earthPosition, earthVelocity = earth.compute_and_differentiate(deptDate)
-    earthVelocity = earthVelocity/86400
-    marsPosition, marsVelocity = mars.compute_and_differentiate(arvDate)
-    marsVelocity = marsVelocity/86400
+    try:
+        earthPosition, earthVelocity = earth.compute_and_differentiate(deptDate)
+        earthVelocity = earthVelocity/86400
+        marsPosition, marsVelocity = mars.compute_and_differentiate(arvDate)
+        marsVelocity = marsVelocity/86400
 
-    vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, 0)
-
-    # If Lambert didnt converge return a high np.cost
-    if (exitflag == -1) or (exitflag == -2):
-        J = 200000
-        return J
+        vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, 0)  # Use 0 revs first
+        
+        # If Lambert didn't converge, try with 1 revolution
+        if exitflag == -1:
+            vEarthDept, vMarsArv, exitflag = LambertIzzo(muS, earthPosition, marsPosition, leg1TOF, 1)
+            
+        # If still didn't work, penalize this solution
+        if (exitflag == -1) or (exitflag == -2):
+            return 1e-5  # Very small fitness (remember we're maximizing 1/cost)
+    
+    except Exception as e:
+        # Handle any other exceptions (e.g., out of bounds for ephemeris)
+        return 1e-5  # Very small fitness for invalid solutions
 
     # ***********************************************************************************************************************************************************
-    # Cost Function
+    # Cost Function - Multi-component objective
     # ***********************************************************************************************************************************************************
 
-    J = abs(np.linalg.norm(vEarthDept - vMarsArv))
-
-    # In Python GA tries to maximize, thus we take the inverse to minimize
-    J = 1.0 / (J + 1e-8)
-
-    return J
+    # 1. Launch delta-V (Earth departure)
+    launch_dv = np.linalg.norm(vEarthDept - earthVelocity)
+    
+    # 2. Arrival delta-V (Mars arrival)
+    arrival_dv = np.linalg.norm(vMarsArv - marsVelocity)
+    
+    # 3. Total delta-V
+    total_dv = launch_dv + arrival_dv
+    
+    # Optional: Add penalty for extremely short/long transfers
+    tof_penalty = 0
+    # if leg1TOF < 180:  # Too short transfers might be unrealistic
+    #     tof_penalty = 10 * (180 - leg1TOF)
+    # elif leg1TOF > 900:  # Longer transfers increase mission risks
+    #     tof_penalty = 0.1 * (leg1TOF - 900)
+    
+    # # Combined cost function with weights
+    J = total_dv + tof_penalty
+    
+    # Compute generation statistics for logging (if this is a new generation)
+    current_gen = gaInstance.generations_completed
+    if hasattr(gaInstance, 'last_recorded_gen') and gaInstance.last_recorded_gen != current_gen:
+        # Get all fitness values of current population
+        population_fitness = gaInstance.last_generation_fitness
+        if population_fitness is not None and len(population_fitness) > 0:
+            valid_fitness = [f for f in population_fitness if f > 0]
+            if valid_fitness:
+                best_dv = 1.0/max(valid_fitness) - 1e-8
+                avg_dv = 1.0/np.mean(valid_fitness) - 1e-8
+                print(f"Generation {current_gen}: Best ΔV = {best_dv:.2f} km/s, Avg ΔV = {avg_dv:.2f} km/s")
+    
+    # Store current generation
+    if not hasattr(gaInstance, 'last_recorded_gen'):
+        gaInstance.last_recorded_gen = 0
+    gaInstance.last_recorded_gen = current_gen
+    
+    # In PyGAD, we're maximizing, so return 1/J (add small constant to avoid division by zero)
+    return 1.0 / (J + 1e-8)

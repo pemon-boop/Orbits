@@ -7,7 +7,8 @@ from scipy.integrate import solve_ivp
 from jplephem.calendar import compute_calendar_date
 
 # Integration Tolerance
-rtol, atol = 1e-8, 1e-9
+rtol = 1e-8 
+atol = 1e-9
 
 def evaluationFunction(x, muS, muM, rM, earth, mars):
 
@@ -80,14 +81,17 @@ def evaluationFunction(x, muS, muM, rM, earth, mars):
     # Plot
     fig = plt.figure(figsize=(10, 12)) # width=10 inches, height=6 inches
     ax = fig.add_subplot(111, projection='3d')
+    
     # Planet Orbits
-    ax.plot(statesEarth.y[0], statesEarth.y[1], statesEarth.y[2], 'b-', label='Earth Orbit')
-    ax.plot(statesMars.y[0], statesMars.y[1], statesMars.y[2], 'r-', label='Mars Orbit')
+    ax.plot(statesEarth.y[0], statesEarth.y[1], statesEarth.y[2], 'b-')
+    ax.plot(statesMars.y[0], statesMars.y[1], statesMars.y[2], 'r-')
+    
     # Points 
-    ax.scatter(earthPosition[0], earthPosition[1], earthPosition[2], color='b', marker='o', label='Departure')
-    # ax.scatter(marsPosition[0], marsPosition[1], marsPosition[2], color='r', marker='o', label='Fly-By')
+    ax.scatter(earthPosition[0], earthPosition[1], earthPosition[2], color='b', marker='o', label='Earth @ Departure')
+    ax.scatter(marsPosition[0], marsPosition[1], marsPosition[2], color='r', marker='o', label='Mars @ Arrival')
+    
     # Transfer Trajectory
-    ax.plot(statesLeg1.y[0], statesLeg1.y[1], statesLeg1.y[2], 'b-', label='Pre-FlyBy Trajectory')
+    ax.plot(statesLeg1.y[0], statesLeg1.y[1], statesLeg1.y[2], 'g-', label='Transfer Trajectory')
     # ax.plot(statesLeg2.y[0], statesLeg2.y[1], statesLeg2.y[2], 'y-', label='Post-FlyBy Trajectory')
     ax.set_xlabel('X (km)')
     ax.set_ylabel('Y (km)')
