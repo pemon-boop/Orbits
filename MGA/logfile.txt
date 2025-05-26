@@ -852,3 +852,63 @@ Traceback (most recent call last):
   File "c:\Users\Devon\Desktop\folder\School\Aero\Orbits\MGA\lambert.py", line 269, in LambertLancasterBlanchard
     raise TypeError(f"Invalid nrev argument. Looking for type 'int'.")
 TypeError: Invalid nrev argument. Looking for type 'int'.
+2025-05-08 14:33:39 ERROR: index 0 is out of bounds for axis 0 with size 0
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 2364, in best_solution
+    best_match_idx = numpy.where(
+                     ~~~~~~~~~~~~
+        pop_fitness == numpy.max(pop_fitness))[0][0]
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: index 0 is out of bounds for axis 0 with size 0
+2025-05-08 14:33:39 ERROR: index 0 is out of bounds for axis 0 with size 0
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1954, in run
+    best_solution, best_solution_fitness, best_match_idx = self.best_solution(
+                                                           ~~~~~~~~~~~~~~~~~~^
+        pop_fitness=self.last_generation_fitness)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 2372, in best_solution
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 2364, in best_solution
+    best_match_idx = numpy.where(
+                     ~~~~~~~~~~~~
+        pop_fitness == numpy.max(pop_fitness))[0][0]
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: index 0 is out of bounds for axis 0 with size 0
+2025-05-08 14:36:46 ERROR: The function assigned to the on_fitness parameter must accept 2 parameters representing the instance of the genetic algorithm and the fitness values of all solutions.
+The passed function named 'on_fitness' accepts 3 parameter(s).
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1005, in __init__
+    raise ValueError(f"The function assigned to the on_fitness parameter must accept 2 parameters representing the instance of the genetic algorithm and the fitness values of all solutions.\nThe passed function named '{on_fitness.__code__.co_name}' accepts {on_fitness.__code__.co_argcount} parameter(s).")
+ValueError: The function assigned to the on_fitness parameter must accept 2 parameters representing the instance of the genetic algorithm and the fitness values of all solutions.
+The passed function named 'on_fitness' accepts 3 parameter(s).
+2025-05-08 14:36:58 ERROR: The function assigned to the on_fitness parameter must accept 2 parameters representing the instance of the genetic algorithm and the fitness values of all solutions.
+The passed function named 'on_fitness' accepts 3 parameter(s).
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1005, in __init__
+    raise ValueError(f"The function assigned to the on_fitness parameter must accept 2 parameters representing the instance of the genetic algorithm and the fitness values of all solutions.\nThe passed function named '{on_fitness.__code__.co_name}' accepts {on_fitness.__code__.co_argcount} parameter(s).")
+ValueError: The function assigned to the on_fitness parameter must accept 2 parameters representing the instance of the genetic algorithm and the fitness values of all solutions.
+The passed function named 'on_fitness' accepts 3 parameter(s).
+2025-05-08 14:38:46 ERROR: index 0 is out of bounds for axis 0 with size 0
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 2364, in best_solution
+    best_match_idx = numpy.where(
+                     ~~~~~~~~~~~~
+        pop_fitness == numpy.max(pop_fitness))[0][0]
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: index 0 is out of bounds for axis 0 with size 0
+2025-05-08 14:38:46 ERROR: index 0 is out of bounds for axis 0 with size 0
+Traceback (most recent call last):
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 1954, in run
+    best_solution, best_solution_fitness, best_match_idx = self.best_solution(
+                                                           ~~~~~~~~~~~~~~~~~~^
+        pop_fitness=self.last_generation_fitness)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 2372, in best_solution
+    raise ex
+  File "C:\Users\Devon\AppData\Local\Programs\Python\Python313\Lib\site-packages\pygad\pygad.py", line 2364, in best_solution
+    best_match_idx = numpy.where(
+                     ~~~~~~~~~~~~
+        pop_fitness == numpy.max(pop_fitness))[0][0]
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: index 0 is out of bounds for axis 0 with size 0

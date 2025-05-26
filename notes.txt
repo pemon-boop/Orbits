@@ -1,0 +1,48 @@
+focus more on dep date
+future time windows for dep date (2029)
+
+change time window to future (2029) -- estimate launch date
+solve earth to mars transfer
+	launch b/w Aug 1, 2028 - Dec 31, 2029
+	must launch and arrive within this window
+	more realistic simulation
+	porkchop plot
+	launch date, tof, delta-v
+
+hitch ride? -- choose orbit for s/c
+singel s/c
+revisit specific region
+circular orbit
+
+talk to mars orbiter
+
+near geseret crater on mars
+research mars orbiter orbit
+how often does it rotate mars, how fast
+when to communicate w mars orbiter
+
+research orbital revisit
+
+maximize revisit
+
+presentation, 1 for each
+
+presentation for porkchop plot
+table for each:
+5 optimal delta-v dates
+5 optimal TOF dates
+
+generate revisit orbit for CAL POLY SLO CAMPUS (lat and long)
+inputs: LAT LONG, D, N 
+how to find a, i, RAAN? refer to paper
+use J2 prop -> prop for 1 cycle
+are we passing thru Cal Poly SLO campus? 
+want to validate orbit -> groundtrack plot
+
+input parameer local time at ascending node calc raan from this 
+polyspace > sun-sync orbit > orbit design > INPUT LOCAL TIME TO RAAN use that function to convert 
+J2 must be an input
+
+start getting polyspaace github onto laptop + desktop
+create a branch and work from that
+create a folder for all astrodynamics things

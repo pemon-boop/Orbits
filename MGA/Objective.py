@@ -82,8 +82,7 @@ def costFunction(gaInstance, x, x_idx, muS, muM, rM, earth, mars):
             valid_fitness = [f for f in population_fitness if f > 0]
             if valid_fitness:
                 best_dv = 1.0/max(valid_fitness) - 1e-8
-                avg_dv = 1.0/np.mean(valid_fitness) - 1e-8
-                print(f"Generation {current_gen}: Best ΔV = {best_dv:.2f} km/s, Avg ΔV = {avg_dv:.2f} km/s")
+                print(f"Generation {current_gen}: Best ΔV = {best_dv:.2f} km/s")
     
     # Store current generation
     if not hasattr(gaInstance, 'last_recorded_gen'):

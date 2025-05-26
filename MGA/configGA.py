@@ -44,10 +44,15 @@ def custom_mutation(offspring, ga_instance):
                 
                 # Different mutation strategy based on gene index
                 if gene_idx == 0:  # Departure date
-                    # For dates, we might want smaller mutations (e.g., +/- 30 days)
-                    mutation_range = min(float(range_width * 0.05), 30.0)  # 5% of range or 30 days, whichever is smaller
-                    mutation = np.random.uniform(-mutation_range, mutation_range)
-                    offspring[gene_idx] += mutation
+                    # Allow larger jumps in the date range with 10% probability
+                    if np.random.random() < 0.1:
+                        # Major jump to different region of the search space
+                        offspring[gene_idx] = np.random.uniform(lb, ub)
+                    else:
+                        # For dates, we might want smaller mutations (e.g., +/- 30 days)
+                        mutation_range = min(float(range_width * 0.05), 30.0)  # 5% of range or 30 days, whichever is smaller
+                        mutation = np.random.uniform(-mutation_range, mutation_range)
+                        offspring[gene_idx] += mutation
                     
                 elif gene_idx == 1:  # TOF
                     # For TOF, allow larger variations (e.g., +/- 10% of current value)
@@ -83,10 +88,15 @@ def custom_mutation(offspring, ga_instance):
                     
                     # Different mutation strategy based on gene index
                     if gene_idx == 0:  # Departure date
-                        # For dates, we might want smaller mutations (e.g., +/- 30 days)
-                        mutation_range = min(float(range_width * 0.05), 30.0)
-                        mutation = np.random.uniform(-mutation_range, mutation_range)
-                        solution[gene_idx] += mutation
+                        # Allow larger jumps in the date range with 10% probability
+                        if np.random.random() < 0.1:
+                            # Major jump to different region of the search space
+                            solution[gene_idx] = np.random.uniform(lb, ub)
+                        else:
+                            # For dates, we might want smaller mutations (e.g., +/- 30 days)
+                            mutation_range = min(float(range_width * 0.05), 30.0)
+                            mutation = np.random.uniform(-mutation_range, mutation_range)
+                            solution[gene_idx] += mutation
                         
                     elif gene_idx == 1:  # TOF
                         # For TOF, allow larger variations (e.g., +/- 10% of current value)
@@ -109,7 +119,7 @@ def custom_mutation(offspring, ga_instance):
 
 def generate_initial_population(pop_size, lb, ub, earth, mars, muS):
     """
-    Generate a smart initial population for the Earth-Mars trajectory problem.
+    Generate a diverse initial population for the Earth-Mars trajectory problem.
     
     Parameters:
         pop_size - Size of the population
@@ -125,13 +135,44 @@ def generate_initial_population(pop_size, lb, ub, earth, mars, muS):
     # Initialize population array
     initial_population = np.zeros((pop_size, len(lb)))
     
-    # Generate dates throughout the search space
-    # Earth-Mars synodic period is ~780 days, so we want to spread 
-    # starting points across potential launch windows
+    # Get the total date range
+    date_range = ub[0] - lb[0]
+    
+    # Divide the date range into segments to ensure coverage
+    num_segments = 20
+    segment_size = date_range / num_segments
+    
+    # Distribute population across segments to ensure full coverage
+    for i in range(pop_size):
+        # Choose a segment for this individual (ensures even distribution)
+        segment = i % num_segments
+        
+        # Generate a date within this segment
+        segment_start = lb[0] + segment * segment_size
+        segment_end = segment_start + segment_size
+        
+        # Set departure date within the segment
+        initial_population[i, 0] = np.random.uniform(segment_start, segment_end)
+        
+        # Set time of flight with different strategies
+        if i % 3 == 0:
+            # Short transfers (near minimum)
+            initial_population[i, 1] = np.random.uniform(lb[1], lb[1] + 100)
+        elif i % 3 == 1:
+            # Medium transfers (Hohmann-like)
+            initial_population[i, 1] = np.random.uniform(200, 350)
+        else:
+            # Long transfers
+            initial_population[i, 1] = np.random.uniform(350, ub[1])
+    
+    # Also include some focused solutions around known launch windows (20% of population)
+    n_window_candidates = int(pop_size * 0.2)
     
     # Historical good Earth-Mars transfer windows (around opposition dates)
-    # Convert to Julian Dates for the algorithm
     historical_windows = [
+        compute_julian_date(2014, 1, 1),
+        compute_julian_date(2016, 3, 1),
+        compute_julian_date(2018, 5, 1),
         compute_julian_date(2020, 7, 1),   # 2020 window
         compute_julian_date(2022, 9, 1),   # 2022 window
         compute_julian_date(2024, 11, 1),  # 2024 window
@@ -139,30 +180,16 @@ def generate_initial_population(pop_size, lb, ub, earth, mars, muS):
         compute_julian_date(2029, 3, 1),   # 2029 window
     ]
     
-    # Create some candidates around these windows
-    n_window_candidates = int(pop_size * 0.3)  # 30% of population from known windows
-    window_indices = np.random.choice(len(historical_windows), n_window_candidates)
-    
+    # Replace some solutions with ones near historical windows
     for i in range(n_window_candidates):
-        window_date = historical_windows[window_indices[i]]
+        idx = pop_size - n_window_candidates + i  # Start replacing from the end
+        window = np.random.choice(historical_windows)
+        
         # Add some randomness around the window date (+/- 60 days)
-        initial_population[i, 0] = window_date + np.random.uniform(-60, 60)
+        initial_population[idx, 0] = window + np.random.uniform(-60, 60)
         
         # TOF around typical Hohmann transfer time (~260 days) with variations
-        initial_population[i, 1] = 260 + np.random.uniform(-60, 140)
-    
-    # Distribute the rest randomly across the search space
-    for i in range(n_window_candidates, pop_size):
-        initial_population[i, 0] = np.random.uniform(lb[0], ub[0])
-        initial_population[i, 1] = np.random.uniform(lb[1], ub[1])
-        
-    # Ensure all values are within bounds
-    for i in range(pop_size):
-        for j in range(len(lb)):
-            if initial_population[i, j] < lb[j]:
-                initial_population[i, j] = lb[j]
-            elif initial_population[i, j] > ub[j]:
-                initial_population[i, j] = ub[j]
+        initial_population[idx, 1] = 260 + np.random.uniform(-60, 140)
     
     return initial_population
 
@@ -218,20 +245,19 @@ def runGA(lb, ub, muS, muM, rM, earth, mars, x0=None):
     #***********************************************************************************************************************************************************
     # Fitness and selection options
     #***********************************************************************************************************************************************************
-    eliteCount = 10  # Increased to keep more promising solutions
+    eliteCount = 5  # Reduced to prevent premature convergence
     matingPoolSize = int(0.5 * pop_size)  # Using half of population for mating
     
-    # Selection method options: tournament is better than roulette for this problem
-    parentSelectionType = "tournament"  # More pressure for best solutions
-    tournamentSize = 5  # Tournament size
+    # Selection method options
+    parentSelectionType = "rws"  # Rank selection for reduced selection pressure
     
-    # Use uniform crossover to better mix the genes
-    crossoverType = "uniform"
+    # Use two-point crossover to better preserve date ranges
+    crossoverType = "two_points"
     crossoverProbability = 0.8
     
-    # Use our custom mutation
+    # Use our custom mutation with improved exploration
     mutationType = custom_mutation
-    mutationPercentage = 0.15  # Increased mutation rate for better exploration
+    mutationPercentage = 0.2  # Increased mutation rate for better exploration
 
     #***********************************************************************************************************************************************************
     # Log GA results
@@ -256,6 +282,29 @@ def runGA(lb, ub, muS, muM, rM, earth, mars, x0=None):
     logger.addHandler(console_handler)
 
     #***********************************************************************************************************************************************************
+    # Custom callback to monitor diversity
+    #***********************************************************************************************************************************************************
+    def on_generation(ga_instance):
+        if ga_instance.generations_completed % 10 == 0:
+            # Calculate diversity statistics for departure dates
+            departure_dates = ga_instance.population[:, 0]
+            min_date = np.min(departure_dates)
+            max_date = np.max(departure_dates)
+            std_date = np.std(departure_dates)
+            
+            # Log diversity information
+            print(f"Generation {ga_instance.generations_completed}: Date range = [{min_date:.1f}, {max_date:.1f}], Std = {std_date:.1f}")
+            
+            # If diversity is getting too low, introduce some random solutions
+            if std_date < (ub[0] - lb[0]) / 50:  # If std dev is less than 2% of the range
+                print("Low diversity detected - introducing new random solutions")
+                worst_idx = np.argsort(ga_instance.last_generation_fitness)[:pop_size//10]  # Replace 10% worst solutions
+                for idx in worst_idx:
+                    ga_instance.population[idx, 0] = np.random.uniform(lb[0], ub[0])
+                    ga_instance.population[idx, 1] = np.random.uniform(lb[1], ub[1])
+        return False
+    
+    #***********************************************************************************************************************************************************
     # Run the GA
     #***********************************************************************************************************************************************************
     
@@ -274,7 +323,6 @@ def runGA(lb, ub, muS, muM, rM, earth, mars, x0=None):
                            gene_space=gene_space,  # Using gene_space instead of init_range
                            initial_population=initial_population,
                            parent_selection_type=parentSelectionType,
-                           K_tournament=tournamentSize,  # For tournament selection
                            crossover_type=crossoverType,
                            crossover_probability=crossoverProbability,
                            mutation_type=mutationType,
@@ -282,7 +330,7 @@ def runGA(lb, ub, muS, muM, rM, earth, mars, x0=None):
                            keep_elitism=eliteCount,  
                            stop_criteria=stallGen,
                            save_best_solutions=True,  # Save best solutions for analysis
-                           # Removed save_solutions to avoid memory issues
+                           on_generation=on_generation,  # Add diversity monitoring
                            parallel_processing=None,  # Disable parallel processing to avoid issues
                            logger=logger)  
     
